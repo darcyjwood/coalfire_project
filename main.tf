@@ -26,7 +26,6 @@ module "loadbalancing" {
   public_subnet = module.networking.public_subnet
   vpc_id        = module.networking.vpc_id
   web_sg        = module.networking.web_sg
-  #default_sg = module.networking.default_sg
   private_asg   = module.compute.private_asg
   tg_port                = 80
   tg_protocol            = "HTTP"
