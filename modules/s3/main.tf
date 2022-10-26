@@ -7,11 +7,6 @@ resource "aws_s3_bucket" "cf_project_bucket" {
   }
 }
 
-# resources = [
-#   aws_s3_bucket.cf_project_bucket.arn,
-#   "${aws_s3_bucket.cf_project_bucket.arn}/*",
-#   ]
-
 # An ACL will enable you to manage access to bucket and objects
 resource "aws_s3_bucket_acl" "cf_bucket_acl" {
   bucket = aws_s3_bucket.cf_project_bucket.id
